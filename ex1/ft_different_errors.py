@@ -1,4 +1,4 @@
-def garden_operations(action):
+def garden_operations(action: str) -> None:
     if action == "all":
         try:
             1 / 0
@@ -26,7 +26,7 @@ def garden_operations(action):
         print("Caught KeyError: 'test3'\n")
 
 
-def test_error_types():
+def test_error_types() -> None:
     print("=== Garden Error Types Demo ===\n")
     print("Testing ValueError...")
     garden_operations("value")
@@ -40,4 +40,5 @@ def test_error_types():
     garden_operations("all")
 
 
-test_error_types()
+if __name__ == "__main__":
+    test_error_types()
